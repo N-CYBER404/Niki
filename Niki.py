@@ -44,7 +44,7 @@ def jalan(z):
 		sys.stdout.write(e)
 		sys.stdout.flush()
 		time.sleep(00000.1)
-⓪➃
+
 
 ##### LOGO #####
 logo = """ -----------------------------•◈•
