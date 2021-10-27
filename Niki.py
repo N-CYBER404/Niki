@@ -121,7 +121,7 @@ def menu():
 		print '\33[1;91mtokens not available'
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		masuk()
+		niki()
 	except requests.exceptions.ConnectionError:
 		print 'No connection'
 		keluar()
