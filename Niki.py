@@ -109,7 +109,7 @@ def menu():
 		time.sleep(1)
 		exit()
 	try:
-		otw = requests.get('https://graph.facebook.com/me/?access_token='+toket)
+		otw = requests.get('https://graph.facebook.com/me/?access_token=+toket')
 		a = json.loads(otw.text)
 		nama = a['name']
 		id = a['id']
@@ -795,3 +795,6 @@ def unfriend():
     
 if __name__ == "__main__":
 	menu()
+
+
+# Okay Decompiling b.py
